@@ -1,0 +1,93 @@
+body {
+	color: #7f5539;
+    background: #e9edc9;
+    font-family: "Times New Roman";
+    margin: 0;
+}
+
+#top {
+    background: #ccd5ae;
+    padding: 40px 20px;
+    text-align: center;
+    color: darkred;
+}
+
+.navbar {
+	font-family: Arial;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    background-color: #a3b18a;
+    position: relative;
+    top: 0em;
+    left: 0em;
+    width: 100em;
+    text-align: center;
+
+}
+
+.navbar li {
+    display: inline-block;
+    float: none;
+}
+.navbar li a {
+    display: block;
+    color: #3a5a40;
+    padding: 12px 100px;
+    font-weight: bold;
+    text-decoration: none;
+}
+.navbar li a:hover {
+    background-color: #ede0d4;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #e6ccb2;
+    width: 265px;
+}
+.dropdown-content a {
+    display: block;
+    padding: 10px 18px;
+    color: #ddb892;
+    text-decoration: none;
+}
+.dropdown-content a:hover {
+    background-color: #1f2a35;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.content {
+    padding: 20px;
+    max-width: 60em;
+    margin: 20px auto;
+    background-color: white;
+}
+
+@media all {
+    body {background-color: #e9edc9;}}
+
+@media print {
+    body {
+ 		background-color: white;
+        color: black;
+    }
+
+    #top {
+        background-color: white;
+        color: black;
+    }
+
+.clearfix {
+    clear: both;
+}
