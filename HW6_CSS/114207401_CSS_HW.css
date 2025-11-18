@@ -1,0 +1,238 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Time New Romam;
+  background-color: #eeede1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.main-container {
+  width: 1000px;
+  border-radius: 16px;
+  box-shadow: 0 15px 30px 5px #c1bcac;
+  display: flex;
+  overflow: hidden;
+}
+
+.left-panel {
+  width: 30%;
+  background: #c1bcac;
+  color: #f7f8fc;
+  display: flex;
+  flex-direction: column;
+}
+
+.right-panel {
+  width: 70%;
+  padding: 24px 32px;
+  background-color: #dad7cd;
+}
+
+.photo-panel {
+  width: 100%;
+  padding: filled;
+}
+
+.photo-panel img {
+  width: 100%;
+  display: block;
+}
+
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px 24px 16px 24px;
+}
+
+.name {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 4px;
+  color: #003049;
+}
+
+.subtitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: #415a77;
+  margin-bottom: 12px;
+}
+
+.about-text {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  color: #415a77;
+}
+
+.contact-list {
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contact-label {
+  font-weight: 600;
+  margin-right: 4px;
+  color: #415a77;
+}
+
+.contact-info a {
+  color: #415a77;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+.school-logo {  
+  padding: 0px 0 100px 0;    
+}
+
+.school-logo img {
+  display: block;
+  width: 130px;          
+}
+
+
+.section {
+  margin-bottom: 24px;
+}
+
+.section-title {
+  font-size: 20px;
+  color: #780000;
+  margin-bottom: 8px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #780000;
+}
+
+.timeline {
+  margin-top: 8px;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.year {
+  flex-basis: 120px;
+  font-weight: 700;
+  color: #003049;
+}
+
+.description {
+  flex: 1;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #415a77;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 12px;
+  margin: 4px 6px 4px 0;
+  border-radius: 999px;
+  background-color: #cad2c5;
+  color: #415a77;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.hw-lab-container {
+  margin-top: 12px;
+  display: flex;
+  gap: 16px;
+}
+
+.hw-column, 
+.lab-column {
+  flex: 1;
+  background-color: #f1f7ee;
+  padding: 12px 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px #c1bcac;
+  color: #003049;
+}
+
+.hw-column h3, .lab-column h3 {
+  font-size: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 4px;
+}
+
+.hw-column ul, .lab-column ul {
+  list-style: none;
+  margin-top: 6px;
+}
+
+.hw-column li, .lab-column li {
+  margin-bottom: 6px;
+}
+
+.hw-column a, .lab-column a {
+  text-decoration: none;    
+  color: #1f3b73;
+  font-size: 14px;
+}
+
+.hw-column a:hover, .lab-column a:hover {
+  color: #ef5b5b;
+  text-decoration: underline;  
+}
+
+.music-grid {
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.music-item {
+  width: 23%;
+  background-color: #f1f7ee;
+  border-radius: 14px;
+  padding: 8px;
+  text-align: center;
+  text-decoration: none;
+  color: #415a77;
+  box-shadow: 0 4px 10px #c1bcac;
+}
+
+.music-item img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 6px;
+}
+
+.music-title {
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.music-item:hover {
+  transform: translateY(-2px);
+  transition: transform, box-shadow 0.15s ease;
+  box-shadow: 0 8px 18px ＃c1bcac;
+}
+
+.music-note {
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #415a77;
+}
