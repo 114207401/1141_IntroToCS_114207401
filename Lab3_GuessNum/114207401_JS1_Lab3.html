@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Number Guessing Game</title>
+</head>
+<body>
+  <h1>114207401_Number Guessing Game</h1>
+  <div id="img"></div>
+
+  <script>
+      var answer = Math.floor(Math.random() * 100) + 1;
+
+      var chances = 7;
+      var low = 1;
+      var high = 100;
+      var guessedCorrectly = false;
+
+      while (chances > 0) {
+        var input = window.prompt(
+          "Guess a number between " + low + " and " + high +
+          ".\nYou have " + chances + " chance(s) left."
+        );
+
+        if (input == null) {
+          alert("Please enter a number.");
+          continue;
+        }
+
+        input = input.trim();
+
+        if (input == "" || isNaN(input)) {
+          alert("Invalid input! Please enter a number.");
+          continue;
+        }
+
+        var guess = Number(input);
+
+        if (guess < low || guess > high) {
+          alert("Out of range! Please enter a number between " + low + " and " + high + ".");
+          continue;
+        }
+
+        chances--;
+
+        if (guess == answer) {
+          guessedCorrectly = true;
+          document.getElementById("img").innerHTML =
+            '<img src="correct.jpg" alt="correct" width="300">';
+          alert("Correct! The answer is " + answer + ".");
+          break;
+        } else if (guess < answer) {
+          alert("Too low!");
+          low = guess + 1;
+        } else {
+          alert("Too high!");
+          high = guess - 1;
+        }
+      }
+
+      if (!guessedCorrectly) {
+        document.getElementById("img").innerHTML =
+          '<img src="wrong.jpg" alt="wrong" width="300">';
+        alert("The correct answer was " + answer + ".");
+      }
+
+  </script>
+</body>
+</html>
