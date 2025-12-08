@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>1A2B Game</title>
+  <style>
+    body { font-family: Time New Roman; padding: 20px; }
+    #record { margin-top: 15px; white-space: pre-line; }
+  </style>
+</head>
+<body>
+
+  <h1 id="title">StudentID_HW6_1A2B</h1>
+
+  <input type="text" id="guessInput" placeholder="Enter 4 digits" maxlength="4">
+  <button onclick="play()">Guess</button>
+
+  <div id="record"></div>
+
+  <script>
+    function generateAnswer() {
+      let pool = ["0","1","2","3","4","5","6","7","8","9"];
+      let ans = [];
+
+      while (ans.length < 4) {
+        let index = Math.floor(Math.random() * pool.length);
+        ans.push(pool[index]);
+        pool.splice(index, 1);
+      }
+      return ans.join("");
+    }
+
+    let answer = generateAnswer();
+    let attempts = 0;
+
+    console.log("Secret answer (for testing):", answer);
+
+    function isValid(str) {
+      if (str.length !== 4) return false;
+      if (!/^\d{4}$/.test(str)) return false;
+
+      let set = new Set(str);
+      return set.size == 4;
+    }
+
+    function checkAB(guess, ans) {
+      let A = 0, B = 0;
+
+      for (let i = 0; i < 4; i++) {
+        if (guess[i] == ans[i]) A++;
+        else if (ans.includes(guess[i])) B++;
+      }
+      return `${A}A${B}B`;
+    }
+
+    function play() {
+      let inputField = document.getElementById("guessInput");
+      let guess = inputField.value.trim();
+      
+      if (!isValid(guess)) {
+        alert("Invalid input!\n- Must be 4 digits\n- No duplicate digits");
+        return;
+      }
+
+      attempts++;
+
+      let result = checkAB(guess, answer);
+
+      document.getElementById("record").innerHTML +=
+        `${attempts}. ${guess} → ${result}\n`;
+
+      inputField.value = "";
+
+      if (result == "4A0B") {
+        alert(`Correct! You guessed it in ${attempts} attempts.`);
+      }
+    }
+
+  </script>
+
+</body>
+</html>
