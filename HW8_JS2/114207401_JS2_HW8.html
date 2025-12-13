@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS Calculator HW8</title>
+    <link rel="stylesheet" href="114207401_JS2_HW8.css"> 
+</head>
+<body>
+    <div class="calculator-container">
+        <h1>JS Calculator</h1>
+        
+        <div class="input-group">
+            <label for="num1">Number 1</label>
+            <input type="number" id="num1" placeholder="Enter first number" required>
+        </div>
+
+        <div class="input-group">
+            <label for="num2">Number 2</label>
+            <input type="number" id="num2" placeholder="Enter second number" required>
+        </div>
+
+        <div class="input-group">
+            <label for="operator">Operate way?</label>
+            <select id="operator">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+        </div>
+
+        <button onclick="calculate()">Add</button> 
+
+        <hr>
+
+        <div class="input-group result-display">
+            <label for="result-output">Result</label>
+            <input type="text" id="result-output" value="0.00" readonly>
+        </div>
+    </div>
+
+    <script src="114207401_JS2_HW8.js"></script>
+</body>
+</html>
